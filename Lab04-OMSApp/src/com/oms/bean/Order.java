@@ -78,7 +78,6 @@ public class Order {
 				res += ol.getProductCost() * ol.getProductQuantity();
 			}
 		}
-//		System.out.println(this.getTotalShip());
 		System.out.println(res + this.getTotalShip());
 		return res + this.getTotalShip();
 	}
@@ -86,9 +85,10 @@ public class Order {
 	private boolean checkHaNoiorHoChiMinh() {
 		String address = this.getCustomerAddress();
 		System.out.println(this.getCustomerAddress());
-		if (address.contains("hn") || address.contains("hà nội") || address.contains("hcm")
-				|| address.contains("hồ chí minh")) {
-			System.out.println("check true");
+		if (address.contains("hn") 
+			|| address.contains("hà nội") 
+			|| address.contains("hcm")
+			|| address.contains("hồ chí minh")) {
 			return true;
 		}
 		return false;
